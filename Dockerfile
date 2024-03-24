@@ -10,6 +10,9 @@ RUN useradd -ms /bin/bash git
 # Disable password authentication for SSH
 RUN sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 
+# create .ssh directory for git user
+RUN mkdir /home/git/.ssh
+
 # Expose SSH port
 EXPOSE 22
 
