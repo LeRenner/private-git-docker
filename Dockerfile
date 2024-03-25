@@ -26,5 +26,5 @@ COPY entrypoint.sh /entrypoint.sh
 # Change permissions of the script to make it executable
 RUN chmod +x /entrypoint.sh
 
-# Start SSH server
-CMD ["/bin/bash", ""]
+# Run entrypoint with bash
+CMD ["/entrypoint.sh"]
