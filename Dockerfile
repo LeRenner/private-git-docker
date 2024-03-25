@@ -20,5 +20,11 @@ RUN mkdir /home/git/.ssh
 # Expose SSH port
 EXPOSE 22
 
+# Copy the script to the container
+COPY entrypoint.sh /entrypoint.sh
+
+# Change permissions of the script to make it executable
+RUN chmod +x /entrypoint.sh
+
 # Start SSH server
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/bin/bash", ""]
