@@ -14,5 +14,7 @@ chown git:git /home/git/.ssh/authorized_keys
 chmod 700 /home/git/.ssh
 chmod 600 /home/git/.ssh/authorized_keys
 
+chmod 755 /projects
+
 # Start SSH server
 /usr/sbin/sshd -D
