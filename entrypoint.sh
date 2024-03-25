@@ -15,6 +15,7 @@ chmod 700 /home/git/.ssh
 chmod 600 /home/git/.ssh/authorized_keys
 
 chmod 755 /projects
+chown git:git /projects
 
 # Start SSH server
 /usr/sbin/sshd -D
